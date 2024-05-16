@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Room Booking System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Meeting Room Booking System</h1>
+    <div id="bookingForm">
+        <label for="roomId">Room ID:</label>
+        <input type="text" id="roomId"><br>
+        <label for="dateTime">Date and Time:</label>
+        <input type="datetime-local" id="dateTime"><br>
+        <label for="duration">Duration (minutes):</label>
+        <input type="number" id="duration"><br>
+        <label for="userName">Your Name:</label>
+        <input type="text" id="userName"><br>
+        <button onclick="bookRoom()">Book Room</button>
+    </div>
+    <div id="bookingStatus"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
